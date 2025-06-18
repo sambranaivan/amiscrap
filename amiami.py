@@ -153,8 +153,8 @@ class ResultSet:
             "pagemax": PER_PAGE,
             "lang": "eng",
             #"s_st_condition_flg":1,
+            #"s_sortkey":"preowned"
             "s_st_list_preorder_available":1,
-            "s_sortkey":"preowned"
         }
         headers = {
             "X-User-Key": "amiami_dev",
