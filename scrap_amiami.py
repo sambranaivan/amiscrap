@@ -9,16 +9,11 @@ import amiami
 
 
 
-def buscar_figuras_paginado():
-    """
-    Ejemplo de búsqueda paginada - más eficiente para búsquedas grandes
-    """
-    print("\n🔍 Búsqueda paginada de figuras de Evangelion...")
-    print("=" * 50)
+def buscar_figuras_paginado(keyword):
     
     try:
         # Búsqueda paginada - obtiene hasta 30 items por página
-        results = amiami.searchPaginated("dragon ball")
+        results = amiami.searchPaginated(keyword)
         
         page = 1
         total_items = 0
@@ -46,15 +41,10 @@ def buscar_figuras_paginado():
         print(f"❌ Error en la búsqueda paginada: {e}")
 
 
-def mostrar_informacion_detallada():
-    """
-    Muestra información más detallada de los items encontrados
-    """
-    print("\n🔍 Información detallada de figuras de Evangelion...")
-    print("=" * 50)
-    
+def mostrar_informacion_detallada(keyword):
+      
     try:
-        results = amiami.searchPaginated("evangelion figure")
+        results = amiami.searchPaginated(keyword)
         
         if results.items:
             # Tomar solo los primeros 3 items para mostrar información detallada
@@ -91,7 +81,7 @@ def main():
     #buscar_figuras_paginado()  # Comenzamos con paginado (más rápido)
     #buscar_personajes_especificos()
     #buscar_con_proxy()
-    mostrar_informacion_detallada()
+    mostrar_informacion_detallada("evangelion")
     
   
 
