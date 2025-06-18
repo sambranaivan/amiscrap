@@ -6,6 +6,7 @@ Basado en: https://github.com/marvinody/amiami
 """
 
 import amiami
+import json
 
 
 
@@ -74,6 +75,72 @@ def mostrar_informacion_detallada(keyword):
     except Exception as e:
         print(f"❌ Error mostrando información detallada: {e}")
 
+def guardar_productos_json(keyword, max_pages=5):
+    """
+    Busca productos por keyword y guarda los resultados en amiami_products.json
+    
+    Args:
+        keyword (str): Palabra clave para buscar
+        max_pages (int): Número máximo de páginas a procesar (default: 5)
+    """
+    try:
+        print(f"🔍 Buscando productos con keyword: '{keyword}'...")
+        
+        # Búsqueda paginada
+        results = amiami.searchPaginated(keyword)
+        
+        all_products = []
+        page = 1
+        
+        while results.hasMore and page <= max_pages:
+            print(f"📄 Procesando página {page}...")
+            
+            for item in results.items:
+                # Obtener todos los atributos del objeto item dinámicamente
+                product_data = {}
+                
+                # Recorrer todos los atributos del objeto
+                for attr_name in dir(item):
+                    # Filtrar métodos privados y métodos especiales
+                    if not attr_name.startswith('_') and not callable(getattr(item, attr_name)):
+                        try:
+                            attr_value = getattr(item, attr_name)
+                            product_data[attr_name] = attr_value
+                        except Exception:
+                            # Si hay algún error al obtener el atributo, lo omitimos
+                            pass
+                
+                all_products.append(product_data)
+            
+            # Intentar cargar la siguiente página
+            if results.hasMore and page < max_pages:
+                results.searchNextPage()
+                page += 1
+            else:
+                break
+        
+        # Preparar datos para JSON
+        json_data = {
+            "search_keyword": keyword,
+            "total_products": len(all_products),
+            "pages_processed": page,
+            "products": all_products
+        }
+        
+        # Guardar en archivo JSON
+        filename = "amiami_products.json"
+        with open(filename, 'w', encoding='utf-8') as f:
+            json.dump(json_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"✅ Guardados {len(all_products)} productos en '{filename}'")
+        print(f"📊 Total de páginas procesadas: {page}")
+        
+        return filename
+        
+    except Exception as e:
+        print(f"❌ Error guardando productos en JSON: {e}")
+        return None
+
 def main():
 
    
@@ -81,7 +148,10 @@ def main():
     #buscar_figuras_paginado()  # Comenzamos con paginado (más rápido)
     #buscar_personajes_especificos()
     #buscar_con_proxy()
-    mostrar_informacion_detallada("evangelion")
+    #mostrar_informacion_detallada("evangelion")
+    
+    # Nueva función para guardar en JSON
+    guardar_productos_json("evangelion",max_pages=1)
     
   
 

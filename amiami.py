@@ -7,15 +7,112 @@ rootURL = "https://api.amiami.com/api/v1.0/items"
 PER_PAGE = 10
 
 class Item:
-    def __init__(self, *args, **kwargs):
-        self.productURL = kwargs['productURL']
-        self.imageURL = kwargs['imageURL']
-        self.productName = kwargs['productName']
-        self.price = kwargs['price']
-        self.productCode = kwargs['productCode']
-        self.availability = kwargs['availability']
-        self.flags = kwargs['flags']
-        self.releaseDate = kwargs['releaseDate']
+    def __init__(self, api_data):
+        # Store all raw API data
+        self.gcode = api_data.get('gcode')
+        self.gname = api_data.get('gname')
+        self.thumb_url = api_data.get('thumb_url')
+        self.thumb_alt = api_data.get('thumb_alt')
+        self.thumb_title = api_data.get('thumb_title')
+        self.min_price = api_data.get('min_price')
+        self.max_price = api_data.get('max_price')
+        self.c_price_taxed = api_data.get('c_price_taxed')
+        self.maker_name = api_data.get('maker_name')
+        self.saleitem = api_data.get('saleitem')
+        self.condition_flg = api_data.get('condition_flg')
+        self.list_preorder_available = api_data.get('list_preorder_available')
+        self.list_backorder_available = api_data.get('list_backorder_available')
+        self.list_store_bonus = api_data.get('list_store_bonus')
+        self.list_amiami_limited = api_data.get('list_amiami_limited')
+        self.instock_flg = api_data.get('instock_flg')
+        self.order_closed_flg = api_data.get('order_closed_flg')
+        self.element_id = api_data.get('element_id')
+        self.salestatus = api_data.get('salestatus')
+        self.salestatus_detail = api_data.get('salestatus_detail')
+        self.releasedate = api_data.get('releasedate')
+        self.jancode = api_data.get('jancode')
+        self.preorderitem = api_data.get('preorderitem')
+        self.saletopitem = api_data.get('saletopitem')
+        self.resale_flg = api_data.get('resale_flg')
+        self.preowned_sale_flg = api_data.get('preowned_sale_flg')
+        self.for_women_flg = api_data.get('for_women_flg')
+        self.genre_moe = api_data.get('genre_moe')
+        self.cate6 = api_data.get('cate6')
+        self.cate7 = api_data.get('cate7')
+        self.buy_flg = api_data.get('buy_flg')
+        self.buy_price = api_data.get('buy_price')
+        self.buy_remarks = api_data.get('buy_remarks')
+        self.stock_flg = api_data.get('stock_flg')
+        self.image_on = api_data.get('image_on')
+        self.image_category = api_data.get('image_category')
+        self.image_name = api_data.get('image_name')
+        self.metaalt = api_data.get('metaalt')
+
+    # Computed properties for backward compatibility
+    @property
+    def productURL(self):
+        return f"https://www.amiami.com/eng/detail/?gcode={self.gcode}" if self.gcode else None
+
+    @property
+    def imageURL(self):
+        return f"https://img.amiami.com{self.thumb_url}" if self.thumb_url else None
+
+    @property
+    def productName(self):
+        return self.gname
+
+    @property
+    def price(self):
+        return self.c_price_taxed
+
+    @property
+    def productCode(self):
+        return self.gcode
+
+    @property
+    def releaseDate(self):
+        return self.releasedate
+
+    @property
+    def availability(self):
+        isSale = self.saleitem == 1
+        isLimited = self.list_store_bonus == 1 or self.list_amiami_limited == 1
+        isPreowned = self.condition_flg == 1
+        isPreorder = self.preorderitem == 1
+        isBackorder = self.list_backorder_available == 1
+        isClosed = self.order_closed_flg == 1
+        
+        if isClosed:
+            if isPreorder:
+                return "Pre-order Closed"
+            elif isBackorder:
+                return "Back-order Closed"
+            else:
+                return "Order Closed"
+        else:
+            if isPreorder:
+                return "Pre-order"
+            elif isBackorder:
+                return "Back-order"
+            elif isPreowned:
+                return "Pre-owned"
+            elif isLimited:
+                return "Limited"
+            elif isSale:
+                return "On Sale"
+            else:
+                return "Available"
+
+    @property
+    def flags(self):
+        return {
+            "isSale": self.saleitem == 1,
+            "isLimited": self.list_store_bonus == 1 or self.list_amiami_limited == 1,
+            "isPreowned": self.condition_flg == 1,
+            "isPreorder": self.preorderitem == 1,
+            "isBackorder": self.list_backorder_available == 1,
+            "isClosed": self.order_closed_flg == 1,
+        }
 
 class ResultSet:
 
@@ -55,7 +152,8 @@ class ResultSet:
             "pagecnt": self.currentPage + 1,
             "pagemax": PER_PAGE,
             "lang": "eng",
-            "s_st_condition_flg":1,
+            #"s_st_condition_flg":1,
+            "s_st_list_preorder_available":1,
             "s_sortkey":"preowned"
         }
         headers = {
@@ -68,60 +166,16 @@ class ResultSet:
 
 
     def __add(self, productInfo):
-       
-        availability = "Unknown status?"
-        isSale = productInfo['saleitem'] == 1
-        isLimited = productInfo['list_store_bonus'] == 1 or productInfo['list_amiami_limited'] == 1
-        isPreowned = productInfo['condition_flg'] == 1
-        isPreorder = productInfo['preorderitem'] == 1
-        isBackorder = productInfo['list_backorder_available'] == 1
-        isClosed = productInfo['order_closed_flg'] == 1
+        item = Item(productInfo)
         
-        flags = {
-            "isSale": isSale,
-            "isLimited": isLimited,
-            "isPreowned": isPreowned,
-            "isPreorder": isPreorder,
-            "isBackorder": isBackorder,
-            "isClosed": isClosed,
-        }
-        if isClosed:
-            if isPreorder:
-                availability = "Pre-order Closed"
-            elif isBackorder:
-                availability = "Back-order Closed"
-            else:
-                availability = "Order Closed"
-        else:
-            if isPreorder:
-                availability = "Pre-order"
-            elif isBackorder:
-                availability = "Back-order"
-            elif isPreowned:
-                availability = "Pre-owned"
-            elif isLimited:
-                availability = "Limited"
-            elif isSale:
-                availability = "On Sale"
-            else:
-                availability = "Available"
-
-        if availability == "Unknown status?":
+        # Check for unknown status (debugging purposes)
+        if item.availability == "Unknown status?":
             print("STATUS ERROR FOR {}: flags:{}, avail:{}".format(
-                productInfo['gcode'],
-                flags,
-                availability,
+                item.gcode,
+                item.flags,
+                item.availability,
             ))
-        item = Item(
-            productURL="https://www.amiami.com/eng/detail/?gcode={}".format(productInfo['gcode']),
-            imageURL="https://img.amiami.com{}".format(productInfo['thumb_url']),
-            productName=productInfo['gname'],
-            price=productInfo['c_price_taxed'],
-            productCode=productInfo['gcode'],
-            availability=availability,
-            flags=flags,
-            releaseDate=productInfo['releasedate'],
-        )
+        
         self.items.append(item)
 
     def __parse(self, obj):
