@@ -55,7 +55,8 @@ class ResultSet:
             "pagecnt": self.currentPage + 1,
             "pagemax": PER_PAGE,
             "lang": "eng",
-            "s_st_condition_flg":1
+            "s_st_condition_flg":1,
+            "s_sortkey":"preowned"
         }
         headers = {
             "X-User-Key": "amiami_dev",
