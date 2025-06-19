@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import time
 import json
 import re
+from datetime import datetime
 
 BASE_URL = "https://www.hlj.com/search/?Word=evangelion&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
 LIVE_PRICE_URL = "https://www.hlj.com/search/livePrice/"
@@ -46,14 +47,16 @@ def parse_page(page_num):
         # Buscar en elementos con IDs que contengan códigos de producto
         for element in card.find_all(attrs={"id": True}):
             try:
-                element_id = element["id"]
-                if isinstance(element_id, str) and "_" in element_id:
-                    # Extraer la parte antes del underscore como posible SKU
-                    potential_sku = element_id.split("_")[0]
-                    if len(potential_sku) > 3:  # SKUs suelen ser más largos
-                        sku = potential_sku
-                        break
-            except (KeyError, TypeError):
+                # Verificar que sea un Tag (no NavigableString) antes de acceder atributos
+                if hasattr(element, 'get'):
+                    element_id = element.get("id")
+                    if isinstance(element_id, str) and "_" in element_id:
+                        # Extraer la parte antes del underscore como posible SKU
+                        potential_sku = element_id.split("_")[0]
+                        if len(potential_sku) > 3:  # SKUs suelen ser más largos
+                            sku = potential_sku
+                            break
+            except (KeyError, TypeError, AttributeError):
                 continue
         
         title = title_el.text.strip() if title_el else None
@@ -114,11 +117,58 @@ def scrape_all(pages=5, delay=1.0):
         time.sleep(delay)  # para no sobrecargar el servidor
     return all_products
 
+def hlj_to_standard(item: dict) -> dict:
+    """
+    Convierte un producto en formato hlj al formato estándar.
+    Formatea release_date como primer día del mes en ISO 8601.
+    """
+    # Parseamos "Month YYYY" a primer día de mes
+    raw_date = item.get("release_date")
+    iso_date = None
+    if raw_date:
+        try:
+            dt = datetime.strptime(raw_date, "%B %Y")
+            iso_date = dt.replace(day=1).date().isoformat()
+        except Exception:
+            iso_date = None
+
+    # Aseguramos que la URL e imagen sean absolutas
+    image_url = item.get("image")
+    if image_url and image_url.startswith("//"):
+        image_url = "https:" + image_url
+
+    return {
+        "id": item.get("sku"),
+        "source": "hlj",
+        "title": item.get("title"),
+        "url": f"https://www.hlj.com{item.get('url')}",
+        "image_url": image_url,
+        "sku": item.get("sku"),
+        "max_sale_qty": int(item.get("max_sale_qty", 0)),
+        #"price": int(item.get("priceNoFormat", 0)),
+        "price": int(item.get("sellPriceNoFormat", 0)),
+        "currency": item.get("currencyCode"),
+        "availability": item.get("availability"),
+        "release_date": iso_date,
+        "in_stock": bool(item.get("is_in_stock")),
+        "flags": {
+            "is_on_sale": item.get("is_on_sale"),
+            "bargain_sale": item.get("bargain_sale"),
+        },
+    }
+
 if __name__ == "__main__":
     productos = scrape_all(pages=1, delay=2)
-    # Guardar en JSON
+    
+    # Guardar datos originales en JSON
     with open("hlj_products.json", "w", encoding="utf-8") as f:
         json.dump(productos, f, ensure_ascii=False, indent=2)
 
+    # Convertir a formato estándar y guardar en segundo JSON
+    productos_estandarizados = [hlj_to_standard(item) for item in productos]
+    with open("hlj_products_standard.json", "w", encoding="utf-8") as f:
+        json.dump(productos_estandarizados, f, ensure_ascii=False, indent=2)
+
     print(f"Total productos scrapeados: {len(productos)}")
-    print("Datos guardados en hlj_products.json")
+    print("Datos originales guardados en hlj_products.json")
+    print("Datos estandarizados guardados en hlj_products_standard.json")

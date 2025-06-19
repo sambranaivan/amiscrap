@@ -7,6 +7,7 @@ Basado en: https://github.com/marvinody/amiami
 
 import amiami
 import json
+from datetime import datetime
 
 
 
@@ -75,9 +76,44 @@ def mostrar_informacion_detallada(keyword):
     except Exception as e:
         print(f"❌ Error mostrando información detallada: {e}")
 
+def amiami_to_standard(item: dict) -> dict:
+    """
+    Convierte un producto en formato amiami al formato estándar.
+    Formatea release_date a ISO 8601.
+    """
+    # Parseamos la fecha de "YYYY-MM-DD hh:mm:ss" a objeto datetime
+    raw_date = item.get("releaseDate") or item.get("releasedate")
+    iso_date = None
+    if raw_date:
+        try:
+            dt = datetime.fromisoformat(str(raw_date))
+            iso_date = dt.isoformat()
+        except Exception:
+            iso_date = None
+
+    return {
+        "id": item.get("gcode"),
+        "source": "amiami",
+        "title": item.get("productName"),
+        "url": item.get("productURL"),
+        "image_url": item.get("imageURL"),
+        "thumbnail_url": f"https://www.amiami.com{item.get('thumb_url')}",
+        "sku": item.get("productCode"),
+        "jancode": item.get("jancode"),
+        "brand": item.get("maker_name"),
+        "price": item.get("price"),
+        "currency": "JPY",
+        "availability": item.get("availability"),
+        "release_date": iso_date,
+        "in_stock": bool(item.get("instock_flg")),
+        "is_preorder": bool(item.get("preorderitem")),
+        "flags": item.get("flags", {}),
+    }
+
 def guardar_productos_json(keyword, max_pages=5):
     """
     Busca productos por keyword y guarda los resultados en amiami_products.json
+    También guarda una versión estandarizada en amiami_products_standard.json
     
     Args:
         keyword (str): Palabra clave para buscar
@@ -90,6 +126,7 @@ def guardar_productos_json(keyword, max_pages=5):
         results = amiami.searchPaginated(keyword)
         
         all_products = []
+        standard_products = []
         page = 1
         
         while results.hasMore and page <= max_pages:
@@ -111,6 +148,10 @@ def guardar_productos_json(keyword, max_pages=5):
                             pass
                 
                 all_products.append(product_data)
+                
+                # Convertir a formato estándar
+                standard_product = amiami_to_standard(product_data)
+                standard_products.append(standard_product)
             
             # Intentar cargar la siguiente página
             if results.hasMore and page < max_pages:
@@ -119,7 +160,7 @@ def guardar_productos_json(keyword, max_pages=5):
             else:
                 break
         
-        # Preparar datos para JSON
+        # Preparar datos para JSON original
         json_data = {
             "search_keyword": keyword,
             "total_products": len(all_products),
@@ -127,19 +168,33 @@ def guardar_productos_json(keyword, max_pages=5):
             "products": all_products
         }
         
-        # Guardar en archivo JSON
+        # Preparar datos para JSON estandarizado
+        standard_json_data = {
+            "search_keyword": keyword,
+            "total_products": len(standard_products),
+            "pages_processed": page,
+            "products": standard_products
+        }
+        
+        # Guardar en archivo JSON original
         filename = "amiami_products.json"
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(json_data, f, indent=2, ensure_ascii=False)
         
+        # Guardar en archivo JSON estandarizado
+        standard_filename = "amiami_products_standard.json"
+        with open(standard_filename, 'w', encoding='utf-8') as f:
+            json.dump(standard_json_data, f, indent=2, ensure_ascii=False)
+        
         print(f"✅ Guardados {len(all_products)} productos en '{filename}'")
+        print(f"✅ Guardados {len(standard_products)} productos estandarizados en '{standard_filename}'")
         print(f"📊 Total de páginas procesadas: {page}")
         
-        return filename
+        return filename, standard_filename
         
     except Exception as e:
         print(f"❌ Error guardando productos en JSON: {e}")
-        return None
+        return None, None
 
 def main():
 
