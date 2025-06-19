@@ -97,7 +97,7 @@ def amiami_to_standard(item: dict) -> dict:
         "title": item.get("productName"),
         "url": item.get("productURL"),
         "image_url": item.get("imageURL"),
-        "thumbnail_url": f"https://www.amiami.com{item.get('thumb_url')}",
+        "thumbnail_url": f"https://img.amiami.com{item.get('thumb_url')}",
         "sku": item.get("productCode"),
         "jancode": item.get("jancode"),
         "brand": item.get("maker_name"),

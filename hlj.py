@@ -5,7 +5,7 @@ import json
 import re
 from datetime import datetime
 
-BASE_URL = "https://www.hlj.com/search/?Word=evangelion&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
+BASE_URL = "https://www.hlj.com/search/?Word=dragonball&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
 LIVE_PRICE_URL = "https://www.hlj.com/search/livePrice/"
 
 headers = {
@@ -26,7 +26,7 @@ def extract_csrf_token(soup):
 
 def parse_page(page_num):
     url = BASE_URL.format(page_num)
-    resp = requests.get(url, headers=headers, timeout=10)
+    resp = requests.get(url, headers=headers, timeout=10, verify=False)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
 
@@ -158,16 +158,32 @@ def hlj_to_standard(item: dict) -> dict:
     }
 
 if __name__ == "__main__":
-    productos = scrape_all(pages=1, delay=2)
+    pages_to_scrape = 1
+    productos = scrape_all(pages=pages_to_scrape, delay=2)
+    
+    # Crear estructura con metadata para datos originales
+    original_data = {
+        "search_keyword": "evangelion",
+        "total_products": len(productos),
+        "pages_processed": pages_to_scrape,
+        "products": productos
+    }
     
     # Guardar datos originales en JSON
     with open("hlj_products.json", "w", encoding="utf-8") as f:
-        json.dump(productos, f, ensure_ascii=False, indent=2)
+        json.dump(original_data, f, ensure_ascii=False, indent=2)
 
     # Convertir a formato estándar y guardar en segundo JSON
     productos_estandarizados = [hlj_to_standard(item) for item in productos]
+    standard_data = {
+        "search_keyword": "evangelion",
+        "total_products": len(productos_estandarizados),
+        "pages_processed": pages_to_scrape,
+        "products": productos_estandarizados
+    }
+    
     with open("hlj_products_standard.json", "w", encoding="utf-8") as f:
-        json.dump(productos_estandarizados, f, ensure_ascii=False, indent=2)
+        json.dump(standard_data, f, ensure_ascii=False, indent=2)
 
     print(f"Total productos scrapeados: {len(productos)}")
     print("Datos originales guardados en hlj_products.json")
