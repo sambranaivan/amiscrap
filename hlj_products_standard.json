@@ -1,21 +1,75 @@
 {
-  "search_keyword": "jujutsu kaisen",
+  "search_keyword": "evangelion",
   "total_products": 24,
   "pages_processed": 1,
-  "timestamp": "2025-06-20T13:24:47.069551",
+  "timestamp": "2025-06-20T18:39:01.166553",
   "products": [
     {
-      "id": "MEG84311",
+      "id": "REM208213",
       "source": "hlj",
-      "title": "Look Up Jujutsu Kaisen Yu Haibara",
-      "url": "https://www.hlj.com/look-up-jujutsu-kaisen-yu-haibara-meg84311",
-      "image_url": "https://www.hlj.com/productthumbs/meg/meg84311_0_1749008410.jpg?v=1749008410",
-      "sku": "MEG84311",
+      "title": "Evangelion : Evangelion Room: 1Box (8pcs)",
+      "url": "https://www.hlj.com/evangelion-evangelion-room-1box-8pcs-rem208213",
+      "image_url": "https://www.hlj.com/productthumbs/rem/rem208213_0_1718693404.jpg?v=1718693404",
+      "sku": "REM208213",
+      "max_sale_qty": 2,
+      "price": 7200,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2024-09-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "REM20881",
+      "source": "hlj",
+      "title": "petadoll Evangelion: 1Box (6pcs)",
+      "url": "https://www.hlj.com/petadoll-evangelion-1box-6pcs-rem20881",
+      "image_url": "https://www.hlj.com/productthumbs/rem/rem20881_0_1733390415.jpg?v=1733390415",
+      "sku": "REM20881",
+      "max_sale_qty": 10,
+      "price": 6000,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2025-03-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "PRS03657",
+      "source": "hlj",
+      "title": "Cutie 1 Rebuild of Evangelion Evangelion Kai Unit 8 Gamma",
+      "url": "https://www.hlj.com/cutie-1-rebuild-of-evangelion-evangelion-kai-unit-8-gamma-prs03657",
+      "image_url": "https://www.hlj.com/productthumbs/prs/prs03657_0_1635754818.jpg?v=1635754818",
+      "sku": "PRS03657",
+      "max_sale_qty": 17,
+      "price": 4600,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2023-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "TKT86170",
+      "source": "hlj",
+      "title": "Metacolle Evangelion Prototype-00",
+      "url": "https://www.hlj.com/metacolle-evangelion-prototype-00-tkt86170",
+      "image_url": "https://www.hlj.com/productthumbs/tkt/tkt86170_0_1474008586.jpg?v=1474008586",
+      "sku": "TKT86170",
       "max_sale_qty": 20,
-      "price": 3800,
+      "price": 800,
       "currency": "JPY",
-      "availability": "Dec  Release",
-      "release_date": "2025-12-01",
+      "availability": "In Stock",
+      "release_date": "2016-09-01",
       "in_stock": true,
       "flags": {
         "is_on_sale": false,
@@ -23,71 +77,17 @@
       }
     },
     {
-      "id": "GSC187832",
+      "id": "THZ21603",
       "source": "hlj",
-      "title": "Nendoroid Doll Megumi Fushiguro (Jujutsu Kaisen)",
-      "url": "https://www.hlj.com/nendoroid-doll-megumi-fushiguro-jujutsu-kaisen-gsc187832",
-      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187832_0_1750387812.jpg?v=1750387812",
-      "sku": "GSC187832",
-      "max_sale_qty": 20,
-      "price": 8636,
-      "currency": "JPY",
-      "availability": "Jan  Release",
-      "release_date": "2026-01-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "GSC187818",
-      "source": "hlj",
-      "title": "Nendoroid Doll Yuji Itadori (Jujutsu Kaisen)",
-      "url": "https://www.hlj.com/nendoroid-doll-yuji-itadori-jujutsu-kaisen-gsc187818",
-      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187818_0_1750387821.jpg?v=1750387821",
-      "sku": "GSC187818",
-      "max_sale_qty": 20,
-      "price": 8636,
-      "currency": "JPY",
-      "availability": "Jan  Release",
-      "release_date": "2026-01-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "BLH93757",
-      "source": "hlj",
-      "title": "Jujutsu Kaisen Kaidama/Tamaori: Ponistep Suguru Geto",
-      "url": "https://www.hlj.com/jujutsu-kaisen-kaidama-tamaori-ponistep-suguru-geto-blh93757",
-      "image_url": "https://www.hlj.com/productthumbs/blh/blh93757_0_1736493052.jpg?v=1736493052",
-      "sku": "BLH93757",
-      "max_sale_qty": 5,
-      "price": 1800,
-      "currency": "JPY",
-      "availability": "July Release",
-      "release_date": "2025-05-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "BLH93758",
-      "source": "hlj",
-      "title": "Jujutsu Kaisen Kaidama/Tamaori: Ponistep Shoko Ieiri",
-      "url": "https://www.hlj.com/jujutsu-kaisen-kaidama-tamaori-ponistep-shoko-ieiri-blh93758",
-      "image_url": "https://www.hlj.com/productthumbs/blh/blh93758_0_1736493016.jpg?v=1736493016",
-      "sku": "BLH93758",
+      "title": "ROBO-DOU Evangelion Test Type-01 (Evangelion: New Theatrical Edition) (Rerelease)",
+      "url": "https://www.hlj.com/robo-dou-evangelion-test-type-01-evangelion-new-theatrical-edition-rerelease-thz21603",
+      "image_url": "https://www.hlj.com/productthumbs/thz/thz21603_0_1724731214.jpg?v=1724731214",
+      "sku": "THZ21603",
       "max_sale_qty": 1,
-      "price": 1800,
+      "price": 26000,
       "currency": "JPY",
-      "availability": "July Release",
-      "release_date": "2025-05-01",
+      "availability": "In Stock",
+      "release_date": "2024-11-01",
       "in_stock": true,
       "flags": {
         "is_on_sale": false,
@@ -95,17 +95,53 @@
       }
     },
     {
-      "id": "MLT07512",
+      "id": "MEDMAFEX-98",
       "source": "hlj",
-      "title": "Jujutsu Kaisen: Twisted Guys 2 1Box 6Pcs",
-      "url": "https://www.hlj.com/jujutsu-kaisen-twisted-guys-2-1box-6pcs-mlt07512",
-      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07512_0_1746673257.jpg?v=1746673257",
-      "sku": "MLT07512",
+      "title": "MAFEX Evangelion Unit-00 (Rebuild)",
+      "url": "https://www.hlj.com/mafex-evangelion-unit-00-rebuild-medmafex-98",
+      "image_url": "https://www.hlj.com/productthumbs/med/medmafex-98_0_1551059490.jpg?v=1551059490",
+      "sku": "MEDMAFEX-98",
+      "max_sale_qty": 20,
+      "price": 8448,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2019-12-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "REM20769",
+      "source": "hlj",
+      "title": "Evangelion DesQ DESKTOP EVA: 1Box (6pcs)",
+      "url": "https://www.hlj.com/evangelion-desq-desktop-eva-1box-6pcs-rem20769",
+      "image_url": "https://www.hlj.com/productthumbs/rem/rem20769_0_1701676807.jpg?v=1701676807",
+      "sku": "REM20769",
+      "max_sale_qty": 9,
+      "price": 7200,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2024-03-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC17908",
+      "source": "hlj",
+      "title": "Nendoroid Gendo Ikari (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/nendoroid-gendo-ikari-rebuild-of-evangelion-gsc17908",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc17908_0_1706586632.jpg?v=1706586632",
+      "sku": "GSC17908",
       "max_sale_qty": 11,
-      "price": 4590,
+      "price": 6545,
       "currency": "JPY",
-      "availability": "Aug  Release",
-      "release_date": "2025-08-01",
+      "availability": "In Stock",
+      "release_date": "2025-04-01",
       "in_stock": true,
       "flags": {
         "is_on_sale": false,
@@ -113,16 +149,214 @@
       }
     },
     {
-      "id": "BLH93756",
+      "id": "FRE51242",
       "source": "hlj",
-      "title": "Jujutsu Kaisen Kaidama/Tamaori: Ponistep Satoru Gojo",
-      "url": "https://www.hlj.com/jujutsu-kaisen-kaidama-tamaori-ponistep-satoru-gojo-blh93756",
-      "image_url": "https://www.hlj.com/productthumbs/blh/blh93756_0_1736493023.jpg?v=1736493023",
-      "sku": "BLH93756",
-      "max_sale_qty": 6,
-      "price": 1800,
+      "title": "figma Gendo Ikari (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/figma-gendo-ikari-rebuild-of-evangelion-fre51242",
+      "image_url": "https://www.hlj.com/productthumbs/fre/fre51242_0_1722311446.jpg?v=1722311446",
+      "sku": "FRE51242",
+      "max_sale_qty": 16,
+      "price": 12000,
       "currency": "JPY",
-      "availability": "July Release",
+      "availability": "In Stock",
+      "release_date": "2025-04-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC94633",
+      "source": "hlj",
+      "title": "1/7 Rebuild of Evangelion: Asuka Langley Figure",
+      "url": "https://www.hlj.com/1-7-scale-rebuild-of-evangelion-asuka-langley-figure-gsc94633",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc94633_0_1668138020.jpg?v=1668138020",
+      "sku": "GSC94633",
+      "max_sale_qty": 14,
+      "price": 23389,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2024-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC17850",
+      "source": "hlj",
+      "title": "Nendoroid Misato Katsuragi (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/nendoroid-misato-katsuragi-rebuild-of-evangelion-gsc17850",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc17850_0_1701143407.jpg?v=1701143407",
+      "sku": "GSC17850",
+      "max_sale_qty": 15,
+      "price": 5732,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2025-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "KDK10165",
+      "source": "hlj",
+      "title": "1/7 Neon Genesis Evangelion [Collector's Edition] Rei Ayanami",
+      "url": "https://www.hlj.com/1-7-scale-neon-genesis-evangelion-collector-s-edition-rei-ayanami-kdk10165",
+      "image_url": "https://www.hlj.com/productthumbs/kdk/kdk10165_0_1721274653.jpg?v=1721274653",
+      "sku": "KDK10165",
+      "max_sale_qty": 5,
+      "price": 18000,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2025-03-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "BANF921070",
+      "source": "hlj",
+      "title": "EVA-FRAME-DX:Rebuild of Evangelion 1Box 3pcs",
+      "url": "https://www.hlj.com/eva-frame-dx-rebuild-of-evangelion-1box-3pcs-banf921070",
+      "image_url": "https://www.hlj.com/productthumbs/ban/banf921070_0_1729242008.jpg?v=1729242008",
+      "sku": "BANF921070",
+      "max_sale_qty": 9,
+      "price": 6300,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2025-04-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC19570",
+      "source": "hlj",
+      "title": "Nendoroid Doll Rei Ayanami (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/nendoroid-doll-rei-ayanami-rebuild-of-evangelion-gsc19570",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc19570_0_1717126875.jpg?v=1717126875",
+      "sku": "GSC19570",
+      "max_sale_qty": 9,
+      "price": 8182,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2025-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "FUJ17110",
+      "source": "hlj",
+      "title": "Evangelion Edition American Crayfish EVA Unit-02",
+      "url": "https://www.hlj.com/evangelion-edition-american-crayfish-eva-unit-02-fuj17110",
+      "image_url": "https://www.hlj.com/productthumbs/fuj/fuj17110_0_1636625505.jpg?v=1636625505",
+      "sku": "FUJ17110",
+      "max_sale_qty": 2,
+      "price": 4320,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2021-10-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "KBYPV-106",
+      "source": "hlj",
+      "title": "1/6 Rei Ayanami -affectionate gaze- (EVANGELION:3.0+1.0)",
+      "url": "https://www.hlj.com/1-6-scale-rei-ayanami-affectionate-gaze-evangelion-3-0-1-0-kbypv-106",
+      "image_url": "https://www.hlj.com/productthumbs/kby/kbypv-106_0_1689214827.jpg?v=1689214827",
+      "sku": "KBYPV-106",
+      "max_sale_qty": 4,
+      "price": 19305,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2024-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "KDK10167",
+      "source": "hlj",
+      "title": "1/7 Neon Genesis Evangelion [Collector's Edition] Soryu Asuka Langley",
+      "url": "https://www.hlj.com/1-7-scale-neon-genesis-evangelion-collector-s-edition-soryu-asuka-langley-kdk10167",
+      "image_url": "https://www.hlj.com/productthumbs/kdk/kdk10167_0_1721274674.jpg?v=1721274674",
+      "sku": "KDK10167",
+      "max_sale_qty": 8,
+      "price": 19000,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2025-03-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MYE91085",
+      "source": "hlj",
+      "title": "1/7 Evangelion: Rei Ayanami Language of Flowers Ver. Figure",
+      "url": "https://www.hlj.com/1-7-scale-evangelion-rei-ayanami-language-of-flowers-ver-figure-mye91085",
+      "image_url": "https://www.hlj.com/productthumbs/mye/mye91085_0_1680171608.jpg?v=1680171608",
+      "sku": "MYE91085",
+      "max_sale_qty": 2,
+      "price": 24500,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2024-03-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "LKT04126",
+      "source": "hlj",
+      "title": "WASA TOY Evangelion Blind Box Toy: 1Box (6pcs)",
+      "url": "https://www.hlj.com/wasa-toy-evangelion-blind-box-toy-1box-6pcs-lkt04126",
+      "image_url": "https://www.hlj.com/productthumbs/lkt/lkt04126_0_1735200607.jpg?v=1735200607",
+      "sku": "LKT04126",
+      "max_sale_qty": 1,
+      "price": 15734,
+      "currency": "JPY",
+      "availability": "In Stock",
+      "release_date": "2025-02-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MEG83873-2",
+      "source": "hlj",
+      "title": "Look Up Rebuild of Evangelion Rei Ayanami (Reissue)",
+      "url": "https://www.hlj.com/look-up-rebuild-of-evangelion-rei-ayanami-reissue-meg83873-2",
+      "image_url": "https://www.hlj.com/productthumbs/meg/meg83873-2_0_1730875904.jpg?v=1730875904",
+      "sku": "MEG83873-2",
+      "max_sale_qty": 1,
+      "price": 3990,
+      "currency": "JPY",
+      "availability": "In Stock",
       "release_date": "2025-05-01",
       "in_stock": true,
       "flags": {
@@ -131,17 +365,17 @@
       }
     },
     {
-      "id": "GSC187849",
+      "id": "GSC19571",
       "source": "hlj",
-      "title": "Nendoroid Doll Outfit Set: Megumi Fushiguro (Jujutsu Kaisen)",
-      "url": "https://www.hlj.com/nendoroid-doll-outfit-set-megumi-fushiguro-jujutsu-kaisen-gsc187849",
-      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187849_0_1750387805.jpg?v=1750387805",
-      "sku": "GSC187849",
-      "max_sale_qty": 20,
-      "price": 5000,
+      "title": "Nendoroid Doll Asuka Shikinami Langley (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/nendoroid-doll-asuka-shikinami-langley-rebuild-of-evangelion-gsc19571",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc19571_0_1717126849.jpg?v=1717126849",
+      "sku": "GSC19571",
+      "max_sale_qty": 13,
+      "price": 8182,
       "currency": "JPY",
-      "availability": "Jan  Release",
-      "release_date": "2026-01-01",
+      "availability": "In Stock",
+      "release_date": "2025-01-01",
       "in_stock": true,
       "flags": {
         "is_on_sale": false,
@@ -149,17 +383,17 @@
       }
     },
     {
-      "id": "GSC187825",
+      "id": "GSC94451",
       "source": "hlj",
-      "title": "Nendoroid Doll Outfit Set: Yuji Itadori (Jujutsu Kaisen)",
-      "url": "https://www.hlj.com/nendoroid-doll-outfit-set-yuji-itadori-jujutsu-kaisen-gsc187825",
-      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187825_0_1750387831.jpg?v=1750387831",
-      "sku": "GSC187825",
-      "max_sale_qty": 20,
-      "price": 5000,
+      "title": "HELLO! GOOD SMILE Shinji Ikari (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/hello-good-smile-shinji-ikari-rebuild-of-evangelion-gsc94451",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc94451_0_1639712439.jpg?v=1639712439",
+      "sku": "GSC94451",
+      "max_sale_qty": 3,
+      "price": 1545,
       "currency": "JPY",
-      "availability": "Jan  Release",
-      "release_date": "2026-01-01",
+      "availability": "In Stock",
+      "release_date": "2022-05-01",
       "in_stock": true,
       "flags": {
         "is_on_sale": false,
@@ -167,270 +401,36 @@
       }
     },
     {
-      "id": "BNU93196",
+      "id": "GSC94452",
       "source": "hlj",
-      "title": "Jujutsu Kaisen: Chibi Plush Sitting Mascot Inumaki Toge",
-      "url": "https://www.hlj.com/jujutsu-kaisen-chibi-plush-sitting-mascot-inumaki-toge-bnu93196",
-      "image_url": "https://www.hlj.com/productthumbs/bnu/bnu93196_0_1750127442.jpg?v=1750127442",
-      "sku": "BNU93196",
-      "max_sale_qty": 20,
-      "price": 1800,
-      "currency": "JPY",
-      "availability": "Sept  Release",
-      "release_date": "2025-09-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "AMD90295",
-      "source": "hlj",
-      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 2. Megumi Fushiguro",
-      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-2-megumi-fushiguro-amd90295",
-      "image_url": "https://www.hlj.com/productthumbs/amd/amd90295_0_1745478033.jpg?v=1745478033",
-      "sku": "AMD90295",
-      "max_sale_qty": 6,
-      "price": 1700,
-      "currency": "JPY",
-      "availability": "Order Stop",
-      "release_date": "2025-09-01",
-      "in_stock": false,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "AMD90296",
-      "source": "hlj",
-      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 3. Kugisaki Nobara",
-      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-3-kugisaki-nobara-amd90296",
-      "image_url": "https://www.hlj.com/productthumbs/amd/amd90296_0_1745478021.jpg?v=1745478021",
-      "sku": "AMD90296",
-      "max_sale_qty": 2,
-      "price": 1700,
-      "currency": "JPY",
-      "availability": "Order Stop",
-      "release_date": "2025-09-01",
-      "in_stock": false,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "SUE18617",
-      "source": "hlj",
-      "title": "Jujutsu Kaisen Figure Sit Gojo (Hidden Inventory / Premature Death)",
-      "url": "https://www.hlj.com/jujutsu-kaisen-figure-sit-gojo-hidden-inventory-premature-death-sue18617",
-      "image_url": "https://www.hlj.com/productthumbs/sue/sue18617_0_1748482824.jpg?v=1748482824",
-      "sku": "SUE18617",
-      "max_sale_qty": 20,
-      "price": 5000,
-      "currency": "JPY",
-      "availability": "Oct  Release",
-      "release_date": "2025-10-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "AMD90297",
-      "source": "hlj",
-      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 4. Kento Nanami",
-      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-4-kento-nanami-amd90297",
-      "image_url": "https://www.hlj.com/productthumbs/amd/amd90297_0_1745478046.jpg?v=1745478046",
-      "sku": "AMD90297",
-      "max_sale_qty": 7,
-      "price": 1700,
-      "currency": "JPY",
-      "availability": "Order Stop",
-      "release_date": "2025-09-01",
-      "in_stock": false,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "SUE18618",
-      "source": "hlj",
-      "title": "Jujutsu Kaisen Figure Sit Geto (Hidden Inventory / Premature Death)",
-      "url": "https://www.hlj.com/jujutsu-kaisen-figure-sit-geto-hidden-inventory-premature-death-sue18618",
-      "image_url": "https://www.hlj.com/productthumbs/sue/sue18618_0_1748482854.jpg?v=1748482854",
-      "sku": "SUE18618",
-      "max_sale_qty": 20,
-      "price": 5000,
-      "currency": "JPY",
-      "availability": "Oct  Release",
-      "release_date": "2025-10-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "MEG84542",
-      "source": "hlj",
-      "title": "Petit Rama DX Jujutsu Kaisen -Hidden Inventory / Premature Death-",
-      "url": "https://www.hlj.com/petit-rama-dx-jujutsu-kaisen-hidden-inventory-premature-death-meg84542",
-      "image_url": "https://www.hlj.com/productthumbs/meg/meg84542_0_1749007825.jpg?v=1749007825",
-      "sku": "MEG84542",
-      "max_sale_qty": 20,
-      "price": 12800,
-      "currency": "JPY",
-      "availability": "Nov  Release",
-      "release_date": "2025-11-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "AMD90294",
-      "source": "hlj",
-      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 1. Yuji Itadori",
-      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-1-yuji-itadori-amd90294",
-      "image_url": "https://www.hlj.com/productthumbs/amd/amd90294_0_1745477405.jpg?v=1745477405",
-      "sku": "AMD90294",
+      "title": "HELLO! GOOD SMILE Kaworu Nagisa (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/hello-good-smile-kaworu-nagisa-rebuild-of-evangelion-gsc94452",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc94452_0_1639712504.jpg?v=1639712504",
+      "sku": "GSC94452",
       "max_sale_qty": 9,
-      "price": 1700,
+      "price": 1545,
       "currency": "JPY",
-      "availability": "Order Stop",
-      "release_date": "2025-09-01",
-      "in_stock": false,
+      "availability": "In Stock",
+      "release_date": "2022-05-01",
+      "in_stock": true,
       "flags": {
         "is_on_sale": false,
         "bargain_sale": false
       }
     },
     {
-      "id": "AMD90298",
+      "id": "GSC12870",
       "source": "hlj",
-      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 5.Satoru Gojo",
-      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-5-satoru-gojo-amd90298",
-      "image_url": "https://www.hlj.com/productthumbs/amd/amd90298_0_1745478011.jpg?v=1745478011",
-      "sku": "AMD90298",
-      "max_sale_qty": 15,
-      "price": 1700,
-      "currency": "JPY",
-      "availability": "Order Stop",
-      "release_date": "2025-09-01",
-      "in_stock": false,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "SUE18619",
-      "source": "hlj",
-      "title": "Jujutsu Kaisen Night Light Gojo (Hidden Inventory / Premature Death)",
-      "url": "https://www.hlj.com/jujutsu-kaisen-night-light-gojo-hidden-inventory-premature-death-sue18619",
-      "image_url": "https://www.hlj.com/productthumbs/sue/sue18619_0_1748482815.jpg?v=1748482815",
-      "sku": "SUE18619",
+      "title": "HELLO! GOOD SMILE Mari Makinami Illustrious (Rebuild of Evangelion)",
+      "url": "https://www.hlj.com/hello-good-smile-mari-makinami-illustrious-rebuild-of-evangelion-gsc12870",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc12870_0_1650598890.jpg?v=1650598890",
+      "sku": "GSC12870",
       "max_sale_qty": 20,
-      "price": 5000,
+      "price": 1364,
       "currency": "JPY",
-      "availability": "Oct  Release",
-      "release_date": "2025-10-01",
+      "availability": "In Stock",
+      "release_date": "2022-08-01",
       "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "MEG84385",
-      "source": "hlj",
-      "title": "MEGA CAT PROJECT Jujutsu Kaisen Hidden Inventory / Premature Death Nyantomo Big na Jujutsu Nyanko Toji Fushiguro",
-      "url": "https://www.hlj.com/mega-cat-project-jujutsu-kaisen-hidden-inventory-premature-death-nyantomo-big-na-jujutsu-nyanko-toji-fushiguro-meg84385",
-      "image_url": "https://www.hlj.com/productthumbs/meg/meg84385_0_1743568271.jpg?v=1743568271",
-      "sku": "MEG84385",
-      "max_sale_qty": 2,
-      "price": 4455,
-      "currency": "JPY",
-      "availability": "Sept  Release",
-      "release_date": "2025-09-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "TTA08850-BOX",
-      "source": "hlj",
-      "title": "Look This Way Fig. Jujutsu Kaisen Kaitama and Tamaori 1Box 6pcs",
-      "url": "https://www.hlj.com/look-this-way-fig-jujutsu-kaisen-kaitama-and-tamaori-1box-6pcs-tta08850-box",
-      "image_url": "https://www.hlj.com/media/original_images/noImage.png",
-      "sku": "TTA08850-BOX",
-      "max_sale_qty": 20,
-      "price": 2400,
-      "currency": "JPY",
-      "availability": "Aug  Release",
-      "release_date": "2025-08-01",
-      "in_stock": true,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "MLT07326",
-      "source": "hlj",
-      "title": "Jj-86 Jujutsu Kaisen Potekoro Mascot Msize 2 D: Satoru Gojo",
-      "url": "https://www.hlj.com/jj-86-jujutsu-kaisen-potekoro-mascot-msize-2-d-satoru-gojo-mlt07326",
-      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07326_0_1743562250.jpg?v=1743562250",
-      "sku": "MLT07326",
-      "max_sale_qty": 9,
-      "price": 1600,
-      "currency": "JPY",
-      "availability": "Order Stop",
-      "release_date": "2025-07-01",
-      "in_stock": false,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "MLT07522",
-      "source": "hlj",
-      "title": "Jujutsu Kaisen: Broken Ball/Ball Breaking: Yr-89 Swinging Head Gojo Satoru (Technical College)",
-      "url": "https://www.hlj.com/jujutsu-kaisen-broken-ball-ball-breaking-yr-89-swinging-head-gojo-satoru-technical-college-mlt07522",
-      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07522_0_1749702080.jpg?v=1749702080",
-      "sku": "MLT07522",
-      "max_sale_qty": 1,
-      "price": 2000,
-      "currency": "JPY",
-      "availability": "Order Stop",
-      "release_date": "2025-09-01",
-      "in_stock": false,
-      "flags": {
-        "is_on_sale": false,
-        "bargain_sale": false
-      }
-    },
-    {
-      "id": "MLT07523",
-      "source": "hlj",
-      "title": "Jujutsu Kaisen: Broken Ball/Ball Breaking: Yr-90 Yurayura Head Geto Suguru (Tech College)",
-      "url": "https://www.hlj.com/jujutsu-kaisen-broken-ball-ball-breaking-yr-90-yurayura-head-geto-suguru-tech-college-mlt07523",
-      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07523_0_1749702021.jpg?v=1749702021",
-      "sku": "MLT07523",
-      "max_sale_qty": 0,
-      "price": 2000,
-      "currency": "JPY",
-      "availability": "Discontinued",
-      "release_date": "2025-09-01",
-      "in_stock": false,
       "flags": {
         "is_on_sale": false,
         "bargain_sale": false

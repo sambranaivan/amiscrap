@@ -25,6 +25,7 @@ class MongoService:
             self.db = self.client[config.database]
             self.products_collection = self.db[config.products_collection]
             self.scrapping_collection = self.db[config.scrapping_collection]
+            self.scrapping_item_collection = self.db[config.scrapping_item_collection]
             
             # Crear índice único en la colección de productos por el campo 'id'
             self.products_collection.create_index("id", unique=True)
@@ -71,7 +72,39 @@ class MongoService:
             logger.error(f"Error guardando log de scraping: {e}")
             raise
 
-    def upsert_product(self, product: Dict[str, Any]) -> Dict[str, Any]:
+    def save_item_scraping_log(self, 
+                              source: str, 
+                              product_id: str, 
+                              original_data: Dict[str, Any]) -> str:
+        """
+        Guarda un log de scraping individual de un producto específico.
+        
+        Args:
+            source: Fuente del scraping ('amiami', 'hlj', etc.)
+            product_id: ID/gcode del producto
+            original_data: Datos originales completos de la API
+        
+        Returns:
+            str: ID del documento insertado
+        """
+        try:
+            item_log = {
+                "source": source,
+                "product_id": product_id,
+                "timestamp": datetime.now(),
+                "original_data": original_data
+            }
+            
+            result = self.scrapping_item_collection.insert_one(item_log)
+            logger.info(f"Log de scraping individual guardado para {source} - {product_id}: {result.inserted_id}")
+            return str(result.inserted_id)
+            
+        except Exception as e:
+            logger.error(f"Error guardando log de scraping individual: {e}")
+            raise
+
+    def upsert_product(self, product: Dict[str, Any], partial_update: bool = False, 
+                      update_fields: Optional[List[str]] = None) -> Dict[str, Any]:
         """
         Inserta o actualiza un producto en la colección de productos.
         Usa el campo 'id' como clave única.
@@ -95,17 +128,34 @@ class MongoService:
             if not existing_product:
                 product['created_at'] = datetime.now()
                 operation_type = "inserted"
+                # Realizar upsert completo para nuevos productos
+                result = self.products_collection.replace_one(
+                    {"id": product['id']}, 
+                    product, 
+                    upsert=True
+                )
             else:
                 # Mantener el created_at original
                 product['created_at'] = existing_product.get('created_at', datetime.now())
                 operation_type = "updated"
-            
-            # Realizar upsert
-            result = self.products_collection.replace_one(
-                {"id": product['id']}, 
-                product, 
-                upsert=True
-            )
+                
+                if partial_update and update_fields:
+                    # Actualización parcial: solo campos especificados
+                    update_data = {field: product[field] for field in update_fields if field in product}
+                    update_data['updated_at'] = product['updated_at']
+                    update_data['created_at'] = product['created_at']
+                    
+                    result = self.products_collection.update_one(
+                        {"id": product['id']},
+                        {"$set": update_data}
+                    )
+                else:
+                    # Actualización completa
+                    result = self.products_collection.replace_one(
+                        {"id": product['id']}, 
+                        product, 
+                        upsert=True
+                    )
             
             logger.info(f"Producto {operation_type}: {product['id']} - {product.get('title', 'Sin título')}")
             
@@ -309,4 +359,43 @@ def save_scraping_data(source: str,
         return {
             "scraping_log_id": scraping_id,
             "products_result": batch_result
+        }
+
+
+def update_single_product(source: str, 
+                         product_id: str, 
+                         original_data: Dict[str, Any], 
+                         standardized_product: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Función de conveniencia para actualizar un producto individual.
+    
+    Args:
+        source: Fuente del scraping
+        product_id: ID del producto
+        original_data: Datos originales del scraping
+        standardized_product: Producto en formato estandarizado
+    
+    Returns:
+        dict: Resultado de las operaciones
+    """
+    with MongoService() as mongo:
+        # Guardar log de scraping individual
+        scraping_id = mongo.save_item_scraping_log(
+            source=source,
+            product_id=product_id,
+            original_data=original_data
+        )
+        
+        # Actualizar producto con campos específicos
+        update_fields = ['title', 'price', 'availability', 'release_date', 'in_stock', 'is_preorder', 'review_images']
+        
+        product_result = mongo.upsert_product(
+            standardized_product, 
+            partial_update=True, 
+            update_fields=update_fields
+        )
+        
+        return {
+            "scraping_log_id": scraping_id,
+            "product_result": product_result
         } 

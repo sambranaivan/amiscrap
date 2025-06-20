@@ -4,7 +4,7 @@ from curl_cffi import requests
 
 
 rootURL = "https://api.amiami.com/api/v1.0/items"
-PER_PAGE = 10
+PER_PAGE = 30
 
 class Item:
     def __init__(self, api_data):
@@ -63,7 +63,7 @@ class Item:
 
     @property
     def price(self):
-        return self.c_price_taxed
+        return self.max_price
 
     @property
     def productCode(self):
@@ -152,9 +152,12 @@ class ResultSet:
             "pagecnt": self.currentPage + 1,
             "pagemax": PER_PAGE,
             "lang": "eng",
-            #"s_st_condition_flg":1,
-            #"s_sortkey":"preowned"
-            "s_st_list_preorder_available":1,
+            "s_sortkey":"recommend",
+            "s_st_list_newitem_available":1,#new items
+            "s_st_condition_flg":1,#pre-owned   
+            #"s_st_list_preorder_available":1#pre-order
+
+          
         }
         headers = {
             "X-User-Key": "amiami_dev",
@@ -213,19 +216,43 @@ def searchPaginated(keywords, proxies=None):
 
     return rs
 
-"""
-def main():
 
-   
-    # Ejecutar ejemplos
-    #buscar_figuras_paginado()  # Comenzamos con paginado (más rápido)
-    #buscar_personajes_especificos()
-    #buscar_con_proxy()
-    results = searchPaginated('evangelion')
-    for item in results.items:
-        print(item.releaseDate)
-  
+def get_item_detail(gcode, proxies=None):
+    """
+    Obtiene información detallada de un producto específico usando su gcode.
+    
+    Args:
+        gcode (str): Código del producto (ej: "FIGURE-172136")
+        proxies (dict, optional): Configuración de proxies
+    
+    Returns:
+        dict: Datos completos del producto desde la API, o None si hay error
+    """
+    item_url = "https://api.amiami.com/api/v1.0/item"
+    
+    params = {
+        "gcode": gcode,
+        "lang": "eng"
+    }
+    
+    headers = {
+        "X-User-Key": "amiami_dev",
+        "User-Agent": "python-amiami_dev",
+    }
+    
+    try:
+        resp = requests.get(item_url, params=params, headers=headers, impersonate="chrome110", proxies=proxies)
+        resp.raise_for_status()
+        
+        data = resp.json()
+        
+        if data.get("RSuccess") and data.get("item"):
+            return data
+        else:
+            print(f"Error obteniendo producto {gcode}: {data.get('RMessage', 'Error desconocido')}")
+            return None
+            
+    except Exception as e:
+        print(f"Error en petición para {gcode}: {e}")
+        return None
 
-if __name__ == "__main__":
-    main()
-"""

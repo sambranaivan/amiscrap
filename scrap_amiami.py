@@ -111,6 +111,9 @@ def amiami_to_standard(item: dict) -> dict:
         "flags": item.get("flags", {}),
     }
 
+
+
+
 def guardar_productos_json(keyword, max_pages=5):
     """
     Busca productos por keyword y guarda los resultados en amiami_products.json
@@ -220,6 +223,9 @@ def guardar_productos_json(keyword, max_pages=5):
         print(f"❌ Error guardando productos en JSON: {e}")
         return None, None
 
+
+
+
 def main():
 
    
@@ -231,6 +237,10 @@ def main():
     
     # Nueva función para guardar en JSON
     guardar_productos_json("evangelion",max_pages=1)
+    
+    # Para actualización de producto individual, usar:
+    # from amiami_single import actualizar_producto_amiami
+    # actualizar_producto_amiami("FIGURE-172136")
     
   
 

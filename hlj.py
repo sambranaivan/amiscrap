@@ -6,7 +6,9 @@ import re
 from datetime import datetime
 from mongo_service import save_scraping_data
 
-BASE_URL = "https://www.hlj.com/search/?Word={}&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
+#BASE_URL = "https://www.hlj.com/search/?Word={}&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
+BASE_URL = "https://www.hlj.com/search/?Word={}&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=In%C2%A0Stock"
+
 LIVE_PRICE_URL = "https://www.hlj.com/search/livePrice/"
 
 headers = {
@@ -160,7 +162,7 @@ def hlj_to_standard(item: dict) -> dict:
 
 if __name__ == "__main__":
     pages_to_scrape = 1
-    keyword = "jujutsu kaisen"
+    keyword = "evangelion"
     productos = scrape_all(keyword, pages=pages_to_scrape, delay=2)
     
     # Crear estructura con metadata para datos originales
