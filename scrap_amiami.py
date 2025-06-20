@@ -161,10 +161,12 @@ def guardar_productos_json(keyword, max_pages=5):
                 break
         
         # Preparar datos para JSON original
+        timestamp = datetime.now().isoformat()
         json_data = {
             "search_keyword": keyword,
             "total_products": len(all_products),
             "pages_processed": page,
+            "timestamp": timestamp,
             "products": all_products
         }
         
@@ -173,6 +175,7 @@ def guardar_productos_json(keyword, max_pages=5):
             "search_keyword": keyword,
             "total_products": len(standard_products),
             "pages_processed": page,
+            "timestamp": timestamp,
             "products": standard_products
         }
         

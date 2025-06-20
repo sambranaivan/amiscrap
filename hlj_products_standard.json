@@ -1,17 +1,180 @@
 {
-  "search_keyword": "evangelion",
-  "total_products": 4,
+  "search_keyword": "jujutsu kaisen",
+  "total_products": 24,
   "pages_processed": 1,
+  "timestamp": "2025-06-20T12:59:35.666465",
   "products": [
     {
-      "id": "BANC651631-2",
+      "id": "MEG84311",
       "source": "hlj",
-      "title": "S.H.Figuarts Super Saiyan Trunks -Infinite Latent Super Power- (Reissue)",
-      "url": "https://www.hlj.com/s-h-figuarts-super-saiyan-trunks-infinite-latent-super-power-reissue-banc651631-2",
-      "image_url": "https://www.hlj.com/productthumbs/ban/banc651631-2_0_1740729618.jpg?v=1740729618",
-      "sku": "BANC651631-2",
+      "title": "Look Up Jujutsu Kaisen Yu Haibara",
+      "url": "https://www.hlj.com/look-up-jujutsu-kaisen-yu-haibara-meg84311",
+      "image_url": "https://www.hlj.com/productthumbs/meg/meg84311_0_1749008410.jpg?v=1749008410",
+      "sku": "MEG84311",
+      "max_sale_qty": 20,
+      "price": 3800,
+      "currency": "JPY",
+      "availability": "Dec  Release",
+      "release_date": "2025-12-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC187832",
+      "source": "hlj",
+      "title": "Nendoroid Doll Megumi Fushiguro (Jujutsu Kaisen)",
+      "url": "https://www.hlj.com/nendoroid-doll-megumi-fushiguro-jujutsu-kaisen-gsc187832",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187832_0_1750387812.jpg?v=1750387812",
+      "sku": "GSC187832",
+      "max_sale_qty": 20,
+      "price": 8636,
+      "currency": "JPY",
+      "availability": "Jan  Release",
+      "release_date": "2026-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC187818",
+      "source": "hlj",
+      "title": "Nendoroid Doll Yuji Itadori (Jujutsu Kaisen)",
+      "url": "https://www.hlj.com/nendoroid-doll-yuji-itadori-jujutsu-kaisen-gsc187818",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187818_0_1750387821.jpg?v=1750387821",
+      "sku": "GSC187818",
+      "max_sale_qty": 20,
+      "price": 8636,
+      "currency": "JPY",
+      "availability": "Jan  Release",
+      "release_date": "2026-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "BLH93757",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen Kaidama/Tamaori: Ponistep Suguru Geto",
+      "url": "https://www.hlj.com/jujutsu-kaisen-kaidama-tamaori-ponistep-suguru-geto-blh93757",
+      "image_url": "https://www.hlj.com/productthumbs/blh/blh93757_0_1736493052.jpg?v=1736493052",
+      "sku": "BLH93757",
+      "max_sale_qty": 5,
+      "price": 1800,
+      "currency": "JPY",
+      "availability": "July Release",
+      "release_date": "2025-05-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "BLH93758",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen Kaidama/Tamaori: Ponistep Shoko Ieiri",
+      "url": "https://www.hlj.com/jujutsu-kaisen-kaidama-tamaori-ponistep-shoko-ieiri-blh93758",
+      "image_url": "https://www.hlj.com/productthumbs/blh/blh93758_0_1736493016.jpg?v=1736493016",
+      "sku": "BLH93758",
       "max_sale_qty": 1,
-      "price": 3600,
+      "price": 1800,
+      "currency": "JPY",
+      "availability": "July Release",
+      "release_date": "2025-05-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MLT07512",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen: Twisted Guys 2 1Box 6Pcs",
+      "url": "https://www.hlj.com/jujutsu-kaisen-twisted-guys-2-1box-6pcs-mlt07512",
+      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07512_0_1746673257.jpg?v=1746673257",
+      "sku": "MLT07512",
+      "max_sale_qty": 11,
+      "price": 4590,
+      "currency": "JPY",
+      "availability": "Aug  Release",
+      "release_date": "2025-08-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "BLH93756",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen Kaidama/Tamaori: Ponistep Satoru Gojo",
+      "url": "https://www.hlj.com/jujutsu-kaisen-kaidama-tamaori-ponistep-satoru-gojo-blh93756",
+      "image_url": "https://www.hlj.com/productthumbs/blh/blh93756_0_1736493023.jpg?v=1736493023",
+      "sku": "BLH93756",
+      "max_sale_qty": 6,
+      "price": 1800,
+      "currency": "JPY",
+      "availability": "July Release",
+      "release_date": "2025-05-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC187849",
+      "source": "hlj",
+      "title": "Nendoroid Doll Outfit Set: Megumi Fushiguro (Jujutsu Kaisen)",
+      "url": "https://www.hlj.com/nendoroid-doll-outfit-set-megumi-fushiguro-jujutsu-kaisen-gsc187849",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187849_0_1750387805.jpg?v=1750387805",
+      "sku": "GSC187849",
+      "max_sale_qty": 20,
+      "price": 5000,
+      "currency": "JPY",
+      "availability": "Jan  Release",
+      "release_date": "2026-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "GSC187825",
+      "source": "hlj",
+      "title": "Nendoroid Doll Outfit Set: Yuji Itadori (Jujutsu Kaisen)",
+      "url": "https://www.hlj.com/nendoroid-doll-outfit-set-yuji-itadori-jujutsu-kaisen-gsc187825",
+      "image_url": "https://www.hlj.com/productthumbs/gsc/gsc187825_0_1750387831.jpg?v=1750387831",
+      "sku": "GSC187825",
+      "max_sale_qty": 20,
+      "price": 5000,
+      "currency": "JPY",
+      "availability": "Jan  Release",
+      "release_date": "2026-01-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "BNU93196",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen: Chibi Plush Sitting Mascot Inumaki Toge",
+      "url": "https://www.hlj.com/jujutsu-kaisen-chibi-plush-sitting-mascot-inumaki-toge-bnu93196",
+      "image_url": "https://www.hlj.com/productthumbs/bnu/bnu93196_0_1750127442.jpg?v=1750127442",
+      "sku": "BNU93196",
+      "max_sale_qty": 20,
+      "price": 1800,
       "currency": "JPY",
       "availability": "Sept  Release",
       "release_date": "2025-09-01",
@@ -22,54 +185,252 @@
       }
     },
     {
-      "id": "ZOC35044",
+      "id": "AMD90295",
       "source": "hlj",
-      "title": "Divine Beast Series CD-DB-01 Azure Dragon Alloy Movable Figure",
-      "url": "https://www.hlj.com/divine-beast-series-cd-db-01-azure-dragon-alloy-movable-figure-zoc35044",
-      "image_url": "https://www.hlj.com/productthumbs/zoc/zoc35044_0_1732500615.jpg?v=1732500615",
-      "sku": "ZOC35044",
-      "max_sale_qty": 20,
-      "price": 15000,
+      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 2. Megumi Fushiguro",
+      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-2-megumi-fushiguro-amd90295",
+      "image_url": "https://www.hlj.com/productthumbs/amd/amd90295_0_1745478033.jpg?v=1745478033",
+      "sku": "AMD90295",
+      "max_sale_qty": 6,
+      "price": 1700,
       "currency": "JPY",
-      "availability": "July Release",
-      "release_date": "2025-07-01",
-      "in_stock": true,
+      "availability": "Order Stop",
+      "release_date": "2025-09-01",
+      "in_stock": false,
       "flags": {
         "is_on_sale": false,
         "bargain_sale": false
       }
     },
     {
-      "id": "MEG84342",
+      "id": "AMD90296",
       "source": "hlj",
-      "title": "Look Up Dragon Ball DAIMA Son Goku (Mini)",
-      "url": "https://www.hlj.com/look-up-dragon-ball-daima-son-goku-mini-meg84342",
-      "image_url": "https://www.hlj.com/productthumbs/meg/meg84342_0_1737105620.jpg?v=1737105620",
-      "sku": "MEG84342",
-      "max_sale_qty": 20,
-      "price": 3990,
+      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 3. Kugisaki Nobara",
+      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-3-kugisaki-nobara-amd90296",
+      "image_url": "https://www.hlj.com/productthumbs/amd/amd90296_0_1745478021.jpg?v=1745478021",
+      "sku": "AMD90296",
+      "max_sale_qty": 2,
+      "price": 1700,
       "currency": "JPY",
-      "availability": "July Release",
-      "release_date": "2025-07-01",
-      "in_stock": true,
+      "availability": "Order Stop",
+      "release_date": "2025-09-01",
+      "in_stock": false,
       "flags": {
         "is_on_sale": false,
         "bargain_sale": false
       }
     },
     {
-      "id": "BANC668738-2",
+      "id": "SUE18617",
       "source": "hlj",
-      "title": "S.H.Figuarts Super Saiyan 3 Son Goku (Reissue)",
-      "url": "https://www.hlj.com/s-h-figuarts-super-saiyan-3-son-goku-reissue-banc668738-2",
-      "image_url": "https://www.hlj.com/productthumbs/ban/banc668738-2_0_1748589621.jpg?v=1748589621",
-      "sku": "BANC668738-2",
-      "max_sale_qty": 1,
-      "price": 6000,
+      "title": "Jujutsu Kaisen Figure Sit Gojo (Hidden Inventory / Premature Death)",
+      "url": "https://www.hlj.com/jujutsu-kaisen-figure-sit-gojo-hidden-inventory-premature-death-sue18617",
+      "image_url": "https://www.hlj.com/productthumbs/sue/sue18617_0_1748482824.jpg?v=1748482824",
+      "sku": "SUE18617",
+      "max_sale_qty": 20,
+      "price": 5000,
       "currency": "JPY",
       "availability": "Oct  Release",
       "release_date": "2025-10-01",
       "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "AMD90297",
+      "source": "hlj",
+      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 4. Kento Nanami",
+      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-4-kento-nanami-amd90297",
+      "image_url": "https://www.hlj.com/productthumbs/amd/amd90297_0_1745478046.jpg?v=1745478046",
+      "sku": "AMD90297",
+      "max_sale_qty": 7,
+      "price": 1700,
+      "currency": "JPY",
+      "availability": "Order Stop",
+      "release_date": "2025-09-01",
+      "in_stock": false,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "SUE18618",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen Figure Sit Geto (Hidden Inventory / Premature Death)",
+      "url": "https://www.hlj.com/jujutsu-kaisen-figure-sit-geto-hidden-inventory-premature-death-sue18618",
+      "image_url": "https://www.hlj.com/productthumbs/sue/sue18618_0_1748482854.jpg?v=1748482854",
+      "sku": "SUE18618",
+      "max_sale_qty": 20,
+      "price": 5000,
+      "currency": "JPY",
+      "availability": "Oct  Release",
+      "release_date": "2025-10-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MEG84542",
+      "source": "hlj",
+      "title": "Petit Rama DX Jujutsu Kaisen -Hidden Inventory / Premature Death-",
+      "url": "https://www.hlj.com/petit-rama-dx-jujutsu-kaisen-hidden-inventory-premature-death-meg84542",
+      "image_url": "https://www.hlj.com/productthumbs/meg/meg84542_0_1749007825.jpg?v=1749007825",
+      "sku": "MEG84542",
+      "max_sale_qty": 20,
+      "price": 12800,
+      "currency": "JPY",
+      "availability": "Nov  Release",
+      "release_date": "2025-11-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "AMD90294",
+      "source": "hlj",
+      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 1. Yuji Itadori",
+      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-1-yuji-itadori-amd90294",
+      "image_url": "https://www.hlj.com/productthumbs/amd/amd90294_0_1745477405.jpg?v=1745477405",
+      "sku": "AMD90294",
+      "max_sale_qty": 9,
+      "price": 1700,
+      "currency": "JPY",
+      "availability": "Order Stop",
+      "release_date": "2025-09-01",
+      "in_stock": false,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "AMD90298",
+      "source": "hlj",
+      "title": "Tv Anime Jujutsu Kaisen: Chimikemo Masukotto 5.Satoru Gojo",
+      "url": "https://www.hlj.com/tv-anime-jujutsu-kaisen-chimikemo-masukotto-5-satoru-gojo-amd90298",
+      "image_url": "https://www.hlj.com/productthumbs/amd/amd90298_0_1745478011.jpg?v=1745478011",
+      "sku": "AMD90298",
+      "max_sale_qty": 15,
+      "price": 1700,
+      "currency": "JPY",
+      "availability": "Order Stop",
+      "release_date": "2025-09-01",
+      "in_stock": false,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "SUE18619",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen Night Light Gojo (Hidden Inventory / Premature Death)",
+      "url": "https://www.hlj.com/jujutsu-kaisen-night-light-gojo-hidden-inventory-premature-death-sue18619",
+      "image_url": "https://www.hlj.com/productthumbs/sue/sue18619_0_1748482815.jpg?v=1748482815",
+      "sku": "SUE18619",
+      "max_sale_qty": 20,
+      "price": 5000,
+      "currency": "JPY",
+      "availability": "Oct  Release",
+      "release_date": "2025-10-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MEG84385",
+      "source": "hlj",
+      "title": "MEGA CAT PROJECT Jujutsu Kaisen Hidden Inventory / Premature Death Nyantomo Big na Jujutsu Nyanko Toji Fushiguro",
+      "url": "https://www.hlj.com/mega-cat-project-jujutsu-kaisen-hidden-inventory-premature-death-nyantomo-big-na-jujutsu-nyanko-toji-fushiguro-meg84385",
+      "image_url": "https://www.hlj.com/productthumbs/meg/meg84385_0_1743568271.jpg?v=1743568271",
+      "sku": "MEG84385",
+      "max_sale_qty": 2,
+      "price": 4455,
+      "currency": "JPY",
+      "availability": "Sept  Release",
+      "release_date": "2025-09-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "TTA08850-BOX",
+      "source": "hlj",
+      "title": "Look This Way Fig. Jujutsu Kaisen Kaitama and Tamaori 1Box 6pcs",
+      "url": "https://www.hlj.com/look-this-way-fig-jujutsu-kaisen-kaitama-and-tamaori-1box-6pcs-tta08850-box",
+      "image_url": "https://www.hlj.com/media/original_images/noImage.png",
+      "sku": "TTA08850-BOX",
+      "max_sale_qty": 20,
+      "price": 2400,
+      "currency": "JPY",
+      "availability": "Aug  Release",
+      "release_date": "2025-08-01",
+      "in_stock": true,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MLT07326",
+      "source": "hlj",
+      "title": "Jj-86 Jujutsu Kaisen Potekoro Mascot Msize 2 D: Satoru Gojo",
+      "url": "https://www.hlj.com/jj-86-jujutsu-kaisen-potekoro-mascot-msize-2-d-satoru-gojo-mlt07326",
+      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07326_0_1743562250.jpg?v=1743562250",
+      "sku": "MLT07326",
+      "max_sale_qty": 9,
+      "price": 1600,
+      "currency": "JPY",
+      "availability": "Order Stop",
+      "release_date": "2025-07-01",
+      "in_stock": false,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MLT07522",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen: Broken Ball/Ball Breaking: Yr-89 Swinging Head Gojo Satoru (Technical College)",
+      "url": "https://www.hlj.com/jujutsu-kaisen-broken-ball-ball-breaking-yr-89-swinging-head-gojo-satoru-technical-college-mlt07522",
+      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07522_0_1749702080.jpg?v=1749702080",
+      "sku": "MLT07522",
+      "max_sale_qty": 1,
+      "price": 2000,
+      "currency": "JPY",
+      "availability": "Order Stop",
+      "release_date": "2025-09-01",
+      "in_stock": false,
+      "flags": {
+        "is_on_sale": false,
+        "bargain_sale": false
+      }
+    },
+    {
+      "id": "MLT07523",
+      "source": "hlj",
+      "title": "Jujutsu Kaisen: Broken Ball/Ball Breaking: Yr-90 Yurayura Head Geto Suguru (Tech College)",
+      "url": "https://www.hlj.com/jujutsu-kaisen-broken-ball-ball-breaking-yr-90-yurayura-head-geto-suguru-tech-college-mlt07523",
+      "image_url": "https://www.hlj.com/productthumbs/mlt/mlt07523_0_1749702021.jpg?v=1749702021",
+      "sku": "MLT07523",
+      "max_sale_qty": 0,
+      "price": 2000,
+      "currency": "JPY",
+      "availability": "Discontinued",
+      "release_date": "2025-09-01",
+      "in_stock": false,
       "flags": {
         "is_on_sale": false,
         "bargain_sale": false

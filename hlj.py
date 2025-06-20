@@ -5,7 +5,7 @@ import json
 import re
 from datetime import datetime
 
-BASE_URL = "https://www.hlj.com/search/?Word=dragonball&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
+BASE_URL = "https://www.hlj.com/search/?Word={}&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
 LIVE_PRICE_URL = "https://www.hlj.com/search/livePrice/"
 
 headers = {
@@ -24,9 +24,9 @@ def extract_csrf_token(soup):
                 return csrf_match.group(1)
     return None
 
-def parse_page(page_num):
-    url = BASE_URL.format(page_num)
-    resp = requests.get(url, headers=headers, timeout=10, verify=False)
+def parse_page(keyword, page_num):
+    url = BASE_URL.format(keyword, page_num)
+    resp = requests.get(url, headers=headers, timeout=10)
     resp.raise_for_status()
     soup = BeautifulSoup(resp.text, "html.parser")
 
@@ -106,11 +106,11 @@ def parse_page(page_num):
 
     return products
 
-def scrape_all(pages=5, delay=1.0):
+def scrape_all(keyword, pages=5, delay=1.0):
     all_products = []
     for p in range(1, pages+1):
         print(f"Scraping página {p}…")
-        prods = parse_page(p)
+        prods = parse_page(keyword, p)
         if not prods:
             break
         all_products.extend(prods)
@@ -159,13 +159,16 @@ def hlj_to_standard(item: dict) -> dict:
 
 if __name__ == "__main__":
     pages_to_scrape = 1
-    productos = scrape_all(pages=pages_to_scrape, delay=2)
+    keyword = "jujutsu kaisen"
+    productos = scrape_all(keyword, pages=pages_to_scrape, delay=2)
     
     # Crear estructura con metadata para datos originales
+    timestamp = datetime.now().isoformat()
     original_data = {
-        "search_keyword": "evangelion",
+        "search_keyword": keyword,
         "total_products": len(productos),
         "pages_processed": pages_to_scrape,
+        "timestamp": timestamp,
         "products": productos
     }
     
@@ -176,9 +179,10 @@ if __name__ == "__main__":
     # Convertir a formato estándar y guardar en segundo JSON
     productos_estandarizados = [hlj_to_standard(item) for item in productos]
     standard_data = {
-        "search_keyword": "evangelion",
+        "search_keyword": keyword,
         "total_products": len(productos_estandarizados),
         "pages_processed": pages_to_scrape,
+        "timestamp": timestamp,
         "products": productos_estandarizados
     }
     
