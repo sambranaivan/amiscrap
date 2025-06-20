@@ -8,6 +8,7 @@ Basado en: https://github.com/marvinody/amiami
 import amiami
 import json
 from datetime import datetime
+from mongo_service import save_scraping_data
 
 
 
@@ -188,6 +189,26 @@ def guardar_productos_json(keyword, max_pages=5):
         standard_filename = "amiami_products_standard.json"
         with open(standard_filename, 'w', encoding='utf-8') as f:
             json.dump(standard_json_data, f, indent=2, ensure_ascii=False)
+        
+        # Guardar en MongoDB
+        try:
+            mongo_result = save_scraping_data(
+                source="amiami",
+                keyword=keyword,
+                original_data=all_products,
+                standardized_products=standard_products,
+                pages_processed=page
+            )
+            
+            print(f"✅ Datos guardados en MongoDB:")
+            print(f"   - Log de scraping ID: {mongo_result['scraping_log_id']}")
+            print(f"   - Productos insertados: {mongo_result['products_result']['inserted_count']}")
+            print(f"   - Productos actualizados: {mongo_result['products_result']['updated_count']}")
+            if mongo_result['products_result']['error_count'] > 0:
+                print(f"   - Errores: {mongo_result['products_result']['error_count']}")
+                
+        except Exception as e:
+            print(f"❌ Error guardando en MongoDB: {e}")
         
         print(f"✅ Guardados {len(all_products)} productos en '{filename}'")
         print(f"✅ Guardados {len(standard_products)} productos estandarizados en '{standard_filename}'")

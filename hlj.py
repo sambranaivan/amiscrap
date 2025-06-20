@@ -4,6 +4,7 @@ import time
 import json
 import re
 from datetime import datetime
+from mongo_service import save_scraping_data
 
 BASE_URL = "https://www.hlj.com/search/?Word={}&page={}&GenreCode2=Action+Figures&GenreCode2=Figures&GenreCode2=Trading+Figures&StockLevel=All+Future+Release"
 LIVE_PRICE_URL = "https://www.hlj.com/search/livePrice/"
@@ -48,7 +49,7 @@ def parse_page(keyword, page_num):
         for element in card.find_all(attrs={"id": True}):
             try:
                 # Verificar que sea un Tag (no NavigableString) antes de acceder atributos
-                if hasattr(element, 'get'):
+                if hasattr(element, 'get') and hasattr(element, 'name'):
                     element_id = element.get("id")
                     if isinstance(element_id, str) and "_" in element_id:
                         # Extraer la parte antes del underscore como posible SKU
@@ -172,7 +173,7 @@ if __name__ == "__main__":
         "products": productos
     }
     
-    # Guardar datos originales en JSON
+    # Guardar datos originales en JSON (mantener compatibilidad)
     with open("hlj_products.json", "w", encoding="utf-8") as f:
         json.dump(original_data, f, ensure_ascii=False, indent=2)
 
@@ -188,6 +189,26 @@ if __name__ == "__main__":
     
     with open("hlj_products_standard.json", "w", encoding="utf-8") as f:
         json.dump(standard_data, f, ensure_ascii=False, indent=2)
+
+    # Guardar en MongoDB
+    try:
+        mongo_result = save_scraping_data(
+            source="hlj",
+            keyword=keyword,
+            original_data=productos,
+            standardized_products=productos_estandarizados,
+            pages_processed=pages_to_scrape
+        )
+        
+        print(f"✅ Datos guardados en MongoDB:")
+        print(f"   - Log de scraping ID: {mongo_result['scraping_log_id']}")
+        print(f"   - Productos insertados: {mongo_result['products_result']['inserted_count']}")
+        print(f"   - Productos actualizados: {mongo_result['products_result']['updated_count']}")
+        if mongo_result['products_result']['error_count'] > 0:
+            print(f"   - Errores: {mongo_result['products_result']['error_count']}")
+            
+    except Exception as e:
+        print(f"❌ Error guardando en MongoDB: {e}")
 
     print(f"Total productos scrapeados: {len(productos)}")
     print("Datos originales guardados en hlj_products.json")
