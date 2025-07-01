@@ -1,4 +1,7 @@
 amiami
 requests
 beautifulsoup4
-pymongo 
+pymongo
+fastapi
+uvicorn[standard]
+curl-cffi 
